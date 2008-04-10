@@ -229,7 +229,7 @@ void Generator::particleAssignDaughters( G4PrimaryParticle* g4p, HepMC::GenParti
     HepLorentzVector pdec = (HepLorentzVector((*vpdec)->momentum().px(),
 					      (*vpdec)->momentum().py(),
 					      (*vpdec)->momentum().pz(),
-					      (*vpdec)->momentum().e())).boost(cmboost) ;
+					      (*vpdec)->momentum().e()));
     // children should only be taken into account once
     G4PrimaryParticle * g4daught= 
       new G4PrimaryParticle((*vpdec)->pdg_id(), pdec.x()*GeV, pdec.y()*GeV, pdec.z()*GeV);
